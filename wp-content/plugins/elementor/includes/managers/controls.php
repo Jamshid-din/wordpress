@@ -455,12 +455,12 @@ class Controls_Manager {
 		 * @param Controls_Manager $this The controls manager.
 		 */
 		// TODO: Uncomment when Pro uses the new hook.
-		Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->do_deprecated_action(
-			'elementor/controls/controls_registered',
-			[ $this ],
-			'3.5.0',
-			'elementor/controls/register'
-		);
+		//Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->do_deprecated_action(
+		//	'elementor/controls/controls_registered',
+		//	[ $this ],
+		//	'3.5.0',
+		//	'elementor/controls/register'
+		//);
 
 		do_action( 'elementor/controls/controls_registered', $this );
 
@@ -492,11 +492,11 @@ class Controls_Manager {
 	 */
 	public function register_control( $control_id, Base_Control $control_instance ) {
 		// TODO: Uncomment when Pro uses the new hook.
-		Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function(
-			__METHOD__,
-			'3.5.0',
-			'register'
-		);
+		//Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function(
+		//	__METHOD__,
+		//	'3.5.0',
+		//	'register'
+		//);
 
 		$this->register( $control_instance, $control_id );
 	}
